@@ -9,11 +9,11 @@ import (
 // Profiles the CPU for `select{}` & `for{}` indefinite blocking methods
 func ProfileForVsSelect() {
 	// Initializing profile files using absolute paths
-	f1, err := os.OpenFile("pprof-output/select_pprof.pprof", os.O_CREATE | os.O_RDWR, 0666)
+	f1, err := os.OpenFile("output/for-select/select-pprof.pprof", os.O_CREATE | os.O_RDWR, 0666)
 	if err !=nil {
 		panic(err)
 	}
-	f2, err := os.OpenFile("pprof-output/for_pprof.pprof", os.O_CREATE | os.O_RDWR, 0666)
+	f2, err := os.OpenFile("output/for-select/for-pprof.pprof", os.O_CREATE | os.O_RDWR, 0666)
 	if err !=nil {
 		panic(err)
 	}

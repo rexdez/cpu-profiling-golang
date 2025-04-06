@@ -3,6 +3,8 @@ package variations
 import (
 	"fmt"
 	"time"
+	"os"
+	"runtime/pprof"
 )
 
 
@@ -18,4 +20,20 @@ func ShowProgress(done <- chan bool) {
 			fmt.Print(".")
 		}
 	}
+}
+
+func SaveProfile(filePath, profileType string) {
+	f, err := os.Create(filePath)
+	if err != nil {
+		fmt.Printf("Error creating %s: %v\n", filePath, err)
+		return
+	}
+	defer f.Close()
+
+	p := pprof.Lookup(profileType)
+	if p == nil {
+		fmt.Printf("Profile type %s not found\n", profileType)
+		return
+	}
+	p.WriteTo(f, 0)
 }
