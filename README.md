@@ -1,7 +1,7 @@
 # CPU profiling in Golang
 
-This repo is a collection of all the variations I have tried while profiling different processes.
-It generates output to folder `pprof-output`. You can run the following command to visualize CPU usage:
+This repo is a collection of all the variations I have tried while profiling differentprocesses.
+I generates output to folder `pprof-output`. You can run the following command to visualize CPU usage:
 
 For CLI:
 ```bash
@@ -16,7 +16,7 @@ replace `filename` with the filename you want to monitor.
 
 
 ## Variations
-1. [`for{}` bs `select{}` profiling]()
+1. [`for{}` bs `select{}` profiling](https://github.com/rexdez/cpu-profiling-golang/blob/main/variations/for_vs_select.go)
 
 
 ## Results

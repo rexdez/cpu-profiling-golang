@@ -6,7 +6,7 @@ import (
 )
 
 
-// ShowProgress just prints "." , so that you won't get bored
+// ShowProgress just prints "." to show progress, keeping you engaged (or keep you waiting)
 func ShowProgress(done <- chan bool) {
 	for {
 		select {
