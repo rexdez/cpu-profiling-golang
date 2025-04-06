@@ -17,6 +17,7 @@ replace `filename` with the filename you want to monitor.
 
 ## Variations
 1. [`for{}` bs `select{}` profiling](https://github.com/rexdez/cpu-profiling-golang/blob/main/variations/for_vs_select.go)
+2. [Worker Pool profiling](https://github.com/rexdez/cpu-profiling-golang/blob/main/variations/workerPool.go)
 
 
 ## Results
