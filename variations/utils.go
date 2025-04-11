@@ -8,7 +8,7 @@ import (
 )
 
 
-// ShowProgress just prints "." to show progress, keeping you engaged (or keep you waiting)
+// ShowProgress prints "." to show progress, keeping you engaged (or keep you waiting)
 func ShowProgress(done <- chan bool) {
 	for {
 		select {
@@ -22,6 +22,7 @@ func ShowProgress(done <- chan bool) {
 	}
 }
 
+// Creates file and stores data based on the lookup
 func SaveProfile(filePath, profileType string) {
 	f, err := os.Create(filePath)
 	if err != nil {
