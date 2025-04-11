@@ -5,12 +5,12 @@ I generates output to folder `pprof-output`. You can run the following command t
 
 For CLI:
 ```bash
-go tool pprof "pprof-output/{filename}_pprof.pprof"
+go tool pprof "output/{profile_variation_name}/{profiling_type}.pprof"
 ```
 
 For http _(ensure graphwiz is installed)_:
 ```bash
-go tool pprof -http=":8000" "pprof-output/{filename}_pprof.pprof"
+go tool pprof -http=":8000" "output/{profile_variation_name}/{profiling_type}.pprof"
 ```
 replace `filename` with the filename you want to monitor.
 
